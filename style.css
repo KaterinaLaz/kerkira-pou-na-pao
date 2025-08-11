@@ -1,27 +1,179 @@
-body {
+/* ===== Base / Layout ===== */
+:root{
+  --bg: #FAF7F3;
+  --fg: #24292f;
+  --muted: #6a737d;
+  --border: #e1e4e8;
+  --link: #0366d6;
+  --accent: #3b82f6; /* checkbox color */
+}
+
+body{
   max-width: 720px;
   margin: 2rem auto;
-  padding: 0 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background-color: #fff;
-  color: #24292f;
-  line-height: 1.6;
+  padding: 0 1rem ;
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--fg);
 }
 
-h1, h2 {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 0.2em;
+/* ===== Typography ===== */
+h1, h2{
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .25em;
+  margin-top: 2.8rem;
+  margin-bottom: .75rem;
 }
+h1{ font-size: 1.875rem; }   /* ~30px */
+h2{ font-size: 1.25rem; }    /* ~20px */
+p, small{ color: var(--muted); }
 
-ul {
-  list-style: none;          /* ❗ Εδώ κρύβονται τα dots */
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* ===== Lists (no bullets) ===== */
+ul{
+  list-style: none;
   padding-left: 0;
+  margin: 0 0 1.25rem;
 }
 
-li {
-  margin-bottom: 0.5rem;
+/* NEW: tidy layout for items (label + pin + description) */
+li{
+  display: grid;
+  grid-template-columns: 1fr auto; /* text + pin */
+  align-items: start;
+  gap: .5rem .75rem;
+  font-size: 1.05rem ;
+  margin-top: 1.65rem ;
+  margin-bottom: -0.08rem ;
+}
+li > label{ grid-column: 1 / 2; }
+li > a{ grid-column: 2 / 3; font-size: 18px;}
+li > .description{ grid-column: 1 / -1; }
+
+/* ===== Checkboxes & labels ===== */
+label{
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  cursor: pointer;
 }
 
-input[type="checkbox"] {
-  margin-right: 0.5em;
+input[type="checkbox"]{
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+/* Focus rings for keyboard users */
+input[type="checkbox"]:focus-visible,
+a:focus-visible{
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ===== Helpers ===== */
+small{ display: inline-block; margin-top: .75rem; }
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 420px){
+  body{ padding-left: .875rem; padding-right: .875rem; }
+  h1{ font-size: 1.6rem; }
+  h2{ font-size: 1.1rem; }
+}
+
+/* ===== Print (optional) ===== */
+@media print{
+  a{ text-decoration: underline; }
+  body{ color: #000; }
+}
+
+/* ===== Accordion ===== */
+.accordion-section ul{
+  display: none;
+  margin-top: 0;
+}
+.accordion-section.open ul{
+  display: block;
+}
+
+/* Make headers clickable + chevron */
+.accordion-section h2{
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding-bottom: .25em; /* larger hit target */
+  position: relative;
+}
+
+/* NEW: keyboard focus on H2 */
+.accordion-section h2:focus-visible{
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.accordion-section h2::after{
+  content: "▼";
+  font-size: .85em;
+  transition: transform .2s ease;
+}
+.accordion-section.open h2::after{
+  transform: rotate(180deg);
+}
+
+/* Smooth reveal (respects reduced motion) */
+@media (prefers-reduced-motion: no-preference){
+  .accordion-section ul{
+    animation: accordion-in .18s ease-out;
+  }
+  @keyframes accordion-in{
+    from{ opacity: 0; transform: translateY(-4px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Print: expand all for a full handout */
+@media print{
+  .accordion-section ul{ display:block !important; }
+  .accordion-section h2::after{ content:""; }
+}
+
+/* Subtle descriptions under each shop */
+.description {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem; /* a bit larger for readability */
+  line-height: 1.45;
+  margin-top: .15rem;
+  /* No left-margin needed because grid places it under the label */
+}
+footer {
+  margin-top: 3rem;   /* space above footer */
+  padding-top: 1.5rem; /* optional: inside padding */
+  border-top: 1px solid var(--border); /* optional: subtle divider */
+  
+}
+.class-footer {
+  font-size: 12px;      
+}
+.map-icon {
+  font-size: 23px;
+  width: 18px;
+  height: auto;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+a:hover .map-icon {
+  transform: scale(1.2);
 }

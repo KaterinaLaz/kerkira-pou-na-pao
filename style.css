@@ -84,7 +84,7 @@ small{ display: inline-block; margin-top: .75rem; }
 
 /* ===== Responsive tweaks ===== */
 @media (max-width: 420px){
-  body{ padding-left: .875rem; padding-right: .875rem; }
+  body{ padding-left: 1.8rem; padding-right: 1.8rem; }
   h1{ font-size: 1.6rem; }
   h2{ font-size: 1.1rem; }
 }

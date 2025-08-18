@@ -35,6 +35,12 @@ a{
 }
 a:hover { text-decoration: underline; }
 
+.section-1st{
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
+  border-radius:8px;
+  padding: 1rem;
+}
+
 /* ===== Lists (no bullets) ===== */
 ul{
   list-style: none;
@@ -99,6 +105,7 @@ small{ display: inline-block; margin-top: .75rem; }
 .accordion-section ul{
   display: none;
   margin-top: 0;
+  
 }
 .accordion-section.open ul{
   display: block;

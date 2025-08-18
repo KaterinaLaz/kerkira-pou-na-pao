@@ -66,6 +66,7 @@
     // Δεν υπάρχει UI για reading list — απλώς βγες
     return;
   }
+  
 
   function getAllItems(){
     const items = [];
@@ -168,11 +169,7 @@
       listEl.appendChild(li);
     });
 
-    // Εμφάνιση/απόκρυψη κουμπιού επαναφοράς, αν υπάρχει
-    if (restoreBtn) {
-      const hasSnapshot = localStorage.getItem('myList:hasSnapshot') === 'true';
-      restoreBtn.style.display = hasSnapshot ? '' : 'none';
-    }
+  
   }
 
   // Ανοίγω/κλείνω drawer
@@ -252,6 +249,35 @@
   });
 })();
 
+/* =========================================================
+   4) LOAD from URL ?saved=... (REPLACE current list)
+   - Clears your current selections and loads the shared ones
+   ========================================================= */
+(function loadFromQueryReplace(){
+  const q = new URLSearchParams(location.search).get('saved');
+  if (!q) return;
+
+  // 1) Clear everything (both UI + localStorage)
+  document.querySelectorAll('input[type="checkbox"][data-id]').forEach(box => {
+    localStorage.setItem(box.dataset.id, 'false');
+    box.checked = false;
+  });
+
+  // 2) Turn on only the ids from the link
+  q.split(',')
+   .map(s => s.trim())
+   .filter(Boolean)
+   .forEach(id => {
+     localStorage.setItem(id, 'true');
+     const box = document.querySelector(`input[type="checkbox"][data-id="${id}"]`);
+     if (box) box.checked = true;
+   });
+
+  // 3) Refresh the drawer UI
+  if (typeof window.updateReadingList === 'function') {
+    window.updateReadingList();
+  }
+})();
 
 
 

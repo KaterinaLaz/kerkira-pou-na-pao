@@ -61,7 +61,6 @@
   const copyBtn = document.getElementById('list-copy');
   const shareBtn = document.getElementById('list-share');
   const clearBtn = document.getElementById('list-clear');
-  const restoreBtn = document.getElementById('list-restore'); // προαιρετικό κουμπί επαναφοράς
 
   if (!fab || !drawer || !listEl) {
     // Δεν υπάρχει UI για reading list — απλώς βγες
@@ -254,71 +253,5 @@
 })();
 
 
-/* =========================================================
-   4) MERGE από URL ?saved=... + Snapshot για επαναφορά
-   - Δεν σβήνει τα δικά σου, προσθέτει τα νέα
-   - Κρατά snapshot για "Επαναφορά δικής μου"
-   ========================================================= */
-(function restoreFromQueryWithMerge(){
-  const q = new URLSearchParams(location.search).get('saved');
-  if (!q) return;
-
-  // Snapshot της τρέχουσας δικής σου λίστας
-  const currentIds = [];
-  document.querySelectorAll('input[type="checkbox"][data-id]').forEach(box => {
-    if (localStorage.getItem(box.dataset.id) === 'true' || box.checked) {
-      currentIds.push(box.dataset.id);
-    }
-  });
-  localStorage.setItem('myList:snapshot', JSON.stringify(currentIds));
-  localStorage.setItem('myList:hasSnapshot', 'true');
-
-  // MERGE: set true μόνο για τα ids του link (χωρίς να σβήνουμε τα υπόλοιπα)
-  q.split(',').map(s => s.trim()).filter(Boolean).forEach(id => {
-    localStorage.setItem(id, 'true');
-  });
-
-  // Μετά το merge, ενημέρωσε το UI
-  if (typeof window.updateReadingList === 'function') {
-    window.updateReadingList();
-  }
-})();
 
 
-/* =========================================================
-   5) Επαναφορά δικής μου (από snapshot)
-   ========================================================= */
-(function enableRestoreFromSnapshot(){
-  const restoreBtn = document.getElementById('list-restore'); // προαιρετικό κουμπί
-  if (!restoreBtn) return;
-
-  const hasSnapshot = localStorage.getItem('myList:hasSnapshot') === 'true';
-  restoreBtn.style.display = hasSnapshot ? '' : 'none';
-
-  restoreBtn.addEventListener('click', () => {
-    const raw = localStorage.getItem('myList:snapshot');
-    if (!raw) return alert('Δεν υπάρχει διαθέσιμο snapshot.');
-
-    const snapshotIds = new Set(JSON.parse(raw));
-
-    // Καθαρισμός & επαναφορά snapshot
-    document.querySelectorAll('input[type="checkbox"][data-id]').forEach(box => {
-      const id = box.dataset.id;
-      const shouldBeChecked = snapshotIds.has(id);
-      localStorage.setItem(id, shouldBeChecked ? 'true' : 'false');
-      box.checked = shouldBeChecked;
-    });
-
-    // Καθάρισε τα metadata του snapshot και κρύψε το κουμπί
-    localStorage.removeItem('myList:snapshot');
-    localStorage.removeItem('myList:hasSnapshot');
-    restoreBtn.style.display = 'none';
-
-    // Ενημέρωσε το UI της λίστας
-    if (typeof window.updateReadingList === 'function') {
-      window.updateReadingList();
-    }
-
-    alert('Η λίστα σου επανήλθε όπως ήταν πριν ανοίξεις τον σύνδεσμο.');
-  });
-})();

@@ -21,6 +21,31 @@
         <p>~  Με αγάπη, ένας Κερκυραίος που ψάχνει πάντα πού να πάει  ~</p>
     </section>
 
+    <!-- Floating Action Button (FAB) για "Η λίστα μου" -->
+<button id="fab-my-list" class="fab" aria-expanded="false" aria-controls="reading-drawer">
+  🧾 Η λίστα μου <span id="fab-count" class="badge">0</span>
+</button>
+
+<!-- Συρτάρι Reading List -->
+<div id="drawer-overlay" class="drawer-overlay" hidden></div>
+<aside id="reading-drawer" class="drawer" aria-hidden="true" role="dialog" aria-label="Η λίστα μου">
+  <header class="drawer-header">
+  <h3>Η λίστα <span id="drawer-count"></span></h3>
+  <button class="icon-btn" id="drawer-close">✖</button>
+</header>
+
+  <ul id="reading-list" class="drawer-list"></ul>
+
+  <footer class="drawer-actions">
+    <button id="list-copy" type="button" style="background-color: #245182; color: white;">Αντιγραφή</button>
+    <button id="list-restore" type="button">Επαναφορά δικής μου</button>
+
+    <button id="list-share" type="button">Κοινή χρήση</button>
+    <button id="list-clear" type="button" class="danger">Καθαρισμός</button>
+  </footer>
+</aside>
+    
+
   <div class="accordion-section">
 <h2>🍇 Μεζεδάκια & Παρέα</h2>
 <ul>
@@ -110,7 +135,7 @@
 </ul>
 </div>
 
-  <p><small style="color: #3b82f6;">💾 Οι επιλογές σου αποθηκεύονται αυτόματα στον browser σου.</small></p>
+  <p><small style="color: #245182;">💾 Οι επιλογές σου αποθηκεύονται αυτόματα στον browser σου.</small></p>
 
   <script src="script.js"></script>
 </body>

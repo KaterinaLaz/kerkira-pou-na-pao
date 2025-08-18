@@ -1,11 +1,11 @@
 /* ===== Base / Layout ===== */
 :root{
-  --bg: #FAF7F3;
+  --bg: #ffffff;
   --fg: #24292f;
   --muted: #6a737d;
   --border: #e1e4e8;
-  --link: #0366d6;
-  --accent: #3b82f6; /* checkbox color */
+  --link: #245182;
+  --accent: #245182; /* checkbox color */
 }
 
 body{
@@ -102,6 +102,15 @@ small{ display: inline-block; margin-top: .75rem; }
 }
 .accordion-section.open ul{
   display: block;
+  background-color: #FAF7F3;
+  border-radius: 8px;
+  margin-top: -0.25rem;
+  padding-left: 1.2rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 0;
+  padding-bottom: 3rem;
 }
 
 /* Make headers clickable + chevron */
@@ -176,4 +185,135 @@ footer {
 }
 a:hover .map-icon {
   transform: scale(1.2);
+}
+/* --- Floating Action Button --- */
+.fab{
+  position: fixed;
+  right: 1rem; bottom: 1rem;
+  z-index: 1100;
+  background: var(--accent);
+  color: #fff;
+  border: 0; border-radius: 999px;
+  padding: .65rem .9rem;
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+.fab .badge{
+  background: rgba(255,255,255,.2);
+  color: #fff;
+  padding: .15rem .45rem;
+  border-radius: 999px;
+  margin-left: .4rem;
+  font-size: .8rem;
+}
+
+/* --- Drawer --- */
+.drawer-overlay{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.25);
+  z-index: 1090;
+}
+.drawer{
+  position: fixed; top: 0; right: 0; bottom: 0;
+  width: min(420px, 92vw);
+  background: var(--bg);
+  border-left: 1px solid var(--border);
+  box-shadow: -12px 0 24px rgba(0,0,0,.12);
+  transform: translateX(100%);
+  transition: transform .25s cubic-bezier(.22,1,.36,1);
+  z-index: 1110;
+  display: flex; flex-direction: column;
+}
+.drawer.open{ 
+  transform: translateX(0); 
+}
+.drawer-header{
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.icon-btn{
+  background: none; 
+  border: 0; 
+  font-size: 1.1rem; 
+  cursor: pointer;
+}
+.drawer-list{
+  list-style: none; 
+  margin: 0; 
+  padding: .5rem 0; 
+  overflow: auto;
+  flex: 1;
+}
+.drawer-list li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+  margin: .4rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}
+.drawer-list li:last-child{ border-bottom: 0; }
+.drawer-list .place{ font-weight: 600; color: var(--fg); }
+.drawer-list .category{ color: var(--muted); font-size: .85rem; margin-left: .35rem; }
+.drawer-list .actions a{ text-decoration: none; }
+
+.drawer-actions{
+  display: flex; 
+  gap: .6rem; 
+  padding: .75rem 1rem; 
+  border-top: 1px solid var(--border);
+  flex-direction:row;
+  justify-content:space-between
+}
+.drawer-actions button{
+  border: 1px solid var(--border);
+  background: #fff; 
+  padding: 0.7rem 1.01rem; 
+  border-radius: 25px; 
+  cursor: pointer;
+  font-size: 15px;
+}
+.drawer-actions .danger{ 
+  background-color: #b42318; 
+  color: #fff;
+}
+
+/* Badge κοινό στυλ (αν δεν υπάρχει ήδη) */
+.badge{
+  display: inline-block; 
+  line-height: 1; 
+  border-radius: 999px;
+}
+
+/* Responsive: σήκωσε λίγο το FAB ώστε να μη σκεπάζει περιεχόμενο */
+@media (max-width: 480px){
+  .fab{ right: .75rem; bottom: .75rem; }
+}
+.actions button svg {
+  transition: color 0.1s ease, transform 0.1s ease;
+  color: #24292f;
+}
+
+.actions button:hover svg {
+  color: #dc2626;       
+  transform: scale(1.15);
+  
+}
+
+.actions a svg {
+    transition: color 0.1s ease, transform 0.1s ease;
+
+}
+
+.actions a:hover svg {
+  transform: scale(1.15);
+  
+}
+
+.drawer-count{
+  display: none;
 }

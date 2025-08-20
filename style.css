@@ -282,7 +282,7 @@ a:hover .map-icon {
 .drawer-actions button{
   border: 1px solid var(--border);
   background: #fff; 
-  padding: 0.7rem 1.01rem; 
+  padding: 0.7rem 3rem; 
   border-radius: 25px; 
   cursor: pointer;
   font-size: 15px;
@@ -329,5 +329,7 @@ a:hover .map-icon {
   transform: scale(1.15);
   
 }
-
+.hide {
+  display: none !important;
+}
 

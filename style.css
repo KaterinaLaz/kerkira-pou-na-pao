@@ -332,4 +332,69 @@ a:hover .map-icon {
 .hide {
   display: none !important;
 }
+/* horizontal nav as pill buttons */
+.toc {
+  display: flex;
+  gap: .6rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  padding: .5rem .25rem;
+  margin: 0 0 1rem;
+  list-style: none;
+
+  /* optional: snap so items align nicely while scrolling */
+  scroll-snap-type: x mandatory;
+}
+.toc > li {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+/* pill button appearance for links */
+.toc a {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .35rem .9rem;
+  border-radius: 999px;
+  background: rgba(36,81,130,0.08); /* light tint */
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+/* hover / focus */
+.toc a:hover,
+.toc a:focus {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+  outline: none;
+}
+
+/* active / current item (use aria-current="true" or add .active) */
+.toc a[aria-current="true"],
+.toc a.active {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+/* scrollbar styling (small) */
+.toc::-webkit-scrollbar { height: 8px; }
+.toc::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+}
+
+/* make pills slightly larger on small screens for touch */
+@media (max-width: 420px) {
+  .toc a { padding: .5rem 1rem; font-size: .95rem; }
+}
 

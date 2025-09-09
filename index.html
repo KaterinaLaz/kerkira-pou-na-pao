@@ -3,13 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Κέρκυρα – Πού να πάω;</title>
-  <meta name="description" content="Προσωπικός οδηγός με αγαπημένα μαγαζιά για φαγητό, καφέ και ποτό στην Κέρκυρα.">
+  <title>Κέρκυρα – Πού να πάω; Οδηγός για φαγητό, καφέ και ποτό</title>
+  <meta name="description" content="Προσωπικός οδηγός με αγαπημένα εστιατόρια, καφέ και μπαρ στην Κέρκυρα. Ιδέες για φαγητό, ποτό και χαλαρές εξόδους, μακριά από τα τουριστικά κλισέ.">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Κέρκυρα – Πού να πάω; Οδηγός για φαγητό, καφέ και ποτό">
+  <meta property="og:description" content="Προσωπικός οδηγός με αγαπημένα εστιατόρια, καφέ και μπαρ στην Κέρκυρα.">
+  <meta property="og:type" content="website">
+  <!-- Replace preview.jpg with your actual social preview image path -->
+  <meta property="og:image" content="preview.jpg">
+  <meta property="og:locale" content="el_GR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Κέρκυρα – Πού να πάω; Οδηγός για φαγητό, καφέ και ποτό">
+  <meta name="twitter:description" content="Προσωπικός οδηγός με αγαπημένα εστιατόρια, καφέ και μπαρ στην Κέρκυρα.">
+  <meta name="twitter:image" content="preview.jpg">
+
+  <!-- Minimal structured data (WebPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "inLanguage": "el-GR",
+    "name": "Κέρκυρα – Πού να πάω; Οδηγός για φαγητό, καφέ και ποτό",
+    "description": "Προσωπικός οδηγός με αγαπημένα εστιατόρια, καφέ και μπαρ στην Κέρκυρα.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Κέρκυρα – Πού να πάω;"
+    }
+  }
+  </script>
 </head>
 <body>
 
   <h1>Κέρκυρα – Πού να πάω; 🍝</h1>
+
+  
 
   <section id="1st-section" class="section-1st">
     <p>Τι είναι αυτό εδώ;</p>
@@ -20,6 +51,19 @@
     <p>Και επειδή είμαστε και λίγο nerds: μπορείς να τσεκάρεις ποια έχεις δοκιμάσει. Γιατί όχι; 😎</p>
     <p>~  Με αγάπη, ένας Κερκυραίος που ψάχνει πάντα πού να πάει  ~</p>
   </section>
+
+  <!-- Jump menu (anchors to sections) -->
+  <nav aria-label="Μετάβαση σε ενότητες">
+    <ul class="toc">
+      <li><a href="#mezedakia">🍇 Μεζεδάκια &amp; Παρέα</a></li>
+      <li><a href="#delivery">🍔 Delivery Favorites</a></li>
+      <li><a href="#fagito">🍽️ Φαγητό</a></li>
+      <li><a href="#brunch">🥞 Μπραντς</a></li>
+      <li><a href="#pizza">🍕 Πίτσα &amp; Ιταλικό</a></li>
+      <li><a href="#kafes">☕ Καφές &amp; Σνακ</a></li>
+      <li><a href="#poto">🍹 Ποτό &amp; Βράδυ</a></li>
+    </ul>
+  </nav>
 
   <button id="fab-my-list" class="fab" aria-expanded="false" aria-controls="reading-drawer">
     🧾 Η λίστα μου <span id="fab-count" class="badge">0</span>
@@ -38,96 +82,254 @@
         <button id="list-clear" type="button" class="danger">Καθαρισμός</button>
       </footer>
     </aside>
-  <div class="accordion-section">
+
+  <div class="accordion-section" id="mezedakia">
     <h2>🍇 Μεζεδάκια & Παρέα</h2>
     <ul>
-      <li><label><input type="checkbox" data-id="ektos-sxediou"> Το Τσιπουράδικο ''Εκτός σχεδίου και ό,τι προκύψει...''</label> <a href="https://www.google.com/maps?q=Το+Τσιπουράδικο+Εκτός+Σχεδίου+και+ό,τι+προκύψει+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+      <li><label><input type="checkbox" data-id="ektos-sxediou"> Το Τσιπουράδικο ''Εκτός σχεδίου και ό,τι προκύψει...''</label>
+        <a href="https://www.google.com/maps?q=Το+Τσιπουράδικο+Εκτός+Σχεδίου+και+ό,τι+προκύψει+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Εκτός Σχεδίου στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Εκτός Σχεδίου στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Από τα αγαπημένα μου για μεζεδάκι μέσα στην πόλη. Πολύ γευστική κουζίνα, ωραίο περιβάλλον και εξαιρετική εξυπηρέτηση. Κάποιες μέρες έχει και live μουσικούλα. Το καλοκαίρι καλό είναι να πας νωρίς (πριν τις 8) για να βρεις τραπέζι, γιατί γίνεται χαμός. Τον χειμώνα όμως η φάση είναι πιο χαλαρή. Το συστήνω ανεπιφύλακτα για όλες τις εποχές.</small>
-      <li><label><input type="checkbox" data-id="berntes"> Ο ΜΠεΡΝΤές - berdès</label> <a href="https://www.google.com/maps?q=Ο+ΜΠεΡΝΤές+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="berntes"> Ο ΜΠεΡΝΤές - berdès</label>
+        <a href="https://www.google.com/maps?q=Ο+ΜΠεΡΝΤές+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Ο ΜΠεΡΝΤές στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Ο ΜΠεΡΝΤές στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Μικρό σποτ, έξω 5–6 τραπέζια, μέσα άλλα 7–8. Παίζει και καλοκαίρι και χειμώνα, και η φάση του είναι χαλαρή. Θα δεις και κάποιους τουρίστες, αλλά συνήθως κυριαρχούν οι παρέες ντόπιων. Δεν είναι ότι δεν έχει κόσμο, απλώς οι αριθμοί είναι πιο νορμάλ. Και αν πετύχεις καμιά παρέα όρθια με μπίρα στο χέρι, μην το σκέφτεσαι πολύ… join in.Ιδανικό για να περάσεις μια χαλαρή βραδιά, να πιάσεις κουβέντα με την παρέα ή και με τους διπλανούς.</small>
     </ul>
   </div>
 
-  <div class="accordion-section">
+  <div class="accordion-section" id="delivery">
     <h2>🍔 Delivery Favorites </h2>
     <ul>
-      <li><label><input type="checkbox" data-id="filis-pezodromos"> Σουβλακείον ο Φίλης</label> <a href="https://www.google.com/maps?q=Σουβλακείον+ο+Φίλης+Κέρκυρα" target="_blank" rel="noopener noreferrer">
-        <img src="google-maps.png" alt="Map location" class="map-icon">
-      </a></li>
+      <li><label><input type="checkbox" data-id="filis-pezodromos"> Σουβλακείον ο Φίλης</label>
+        <a href="https://www.google.com/maps?q=Σουβλακείον+ο+Φίλης+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Σουβλακείον ο Φίλης στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Σουβλακείον ο Φίλης στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Αν θες σουβλάκι στο κέντρο και δεν σε ψήνει να το πάρεις στο χέρι ή με ντελίβερι, ο Φίλης είναι στάνταρ επιλογή. Είναι στον πεζόδρομο, οπότε τρως ήσυχα χωρίς το τρελό πέρα-δώθε του Σαρόκου.</small>
-      <li><label><input type="checkbox" data-id="firi-firi"> Φιρί-φιρί</label> <a href="https://www.google.com/maps?q=Φιρί-φιρί+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="firi-firi"> Φιρί-φιρί</label>
+        <a href="https://www.google.com/maps?q=Φιρί-φιρί+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Φιρί-φιρί στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Φιρί-φιρί στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Για μένα είναι η πρώτη επιλογή για μπέργκερ. Οκ, είναι στην κατηγορία ντελίβερι, αλλά αξίζει να πας και από κοντά. Άψογη και το φαγητό πραγματικά νόστιμο. Συν ότι έχουν μια τεράστια λίστα με μπίρες</small>
-      <li><label><input type="checkbox" data-id="thessalonikios"> Θεσσαλονικιός</label> <a href="https://www.google.com/maps?q=Θεσσαλονικιός+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="pitzaland"> Pizza Land</label> <a href="https://www.google.com/maps?q=Pizza+Land+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="hidden-gem"> Hidden Gem</label> <a href="https://www.google.com/maps?q=Hidden+Gem+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="thessalonikios"> Θεσσαλονικιός</label>
+        <a href="https://www.google.com/maps?q=Θεσσαλονικιός+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Θεσσαλονικιός στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Θεσσαλονικιός στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="pitzaland"> Pizza Land</label>
+        <a href="https://www.google.com/maps?q=Pizza+Land+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Pizza Land στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Pizza Land στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="hidden-gem"> Hidden Gem</label>
+        <a href="https://www.google.com/maps?q=Hidden+Gem+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Hidden Gem στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Hidden Gem στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Αν περάσεις για καφέ από εδώ, κάνε στον εαυτό σου μια χάρη και πρόσθεσε στις παραγγελία σου τις μπάρες με φυστικοβούτυρο.</small>
     </ul>
   </div>
 
-  <div class="accordion-section">
+  <div class="accordion-section" id="fagito">
     <h2>🍽️ Φαγητό</h2>
     <ul>
-      <li><label><input type="checkbox" data-id="ninou"> Ninos</label> <a href="https://www.google.com/maps?q=Ninos+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="laiki"> Λαϊκή (Κεντρική Αγορά Κέρκυρας) </label> <a href="https://www.google.com/maps?q=Λαϊκή+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+      <li><label><input type="checkbox" data-id="ninou"> Ninos</label>
+        <a href="https://www.google.com/maps?q=Ninos+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Ninos στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Ninos στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="laiki"> Λαϊκή (Κεντρική Αγορά Κέρκυρας) </label>
+        <a href="https://www.google.com/maps?q=Λαϊκή+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Λαϊκή Κεντρική Αγορά στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Λαϊκή Κεντρική Αγορά στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Εδώ μιλάμε για ξεχωριστή φάση, γιατί είναι μέσα στη Λαϊκή. Αν πας μετά τη 1, ξέχνα το τραπέζι. Ο χώρος θυμίζει καντίνα, αλλά το φαγητό είναι άλλο επίπεδο. Φρέσκο ψαράκι και νόστιμα πιάτα.</small>
-      <li><label><input type="checkbox" data-id="kyrios-spiros"> Mr. Spiros Taverna - Ταβέρνα "Ο Κύριος Σπύρος"</label> <a href="https://www.google.com/maps?q=Ταβέρνα+Ο+Κύριος+Σπύρος+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="ladokola"> Λαδόκολλα</label> <a href="https://www.google.com/maps?q=Λαδόκολλα+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="limopoula"> Ταβέρνα Λιμνοπούλα</label> <a href="https://www.google.com/maps?q=Ταβέρνα+Λιμνοπούλα+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="apomero"> Apomero</label> <a href="https://www.google.com/maps?q=Apomero+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="strivodikon"> Στριβοδικείον</label> <a href="https://www.google.com/maps?q=Στριβοδικείον+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="maragkos"> ΜΑΡΑΓΚΟΣ Ψησταριά</label> <a href="https://www.google.com/maps?q=ΜΑΡΑΓΚΟΣ+Ψησταριά+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="kyrios-spiros"> Mr. Spiros Taverna - Ταβέρνα "Ο Κύριος Σπύρος"</label>
+        <a href="https://www.google.com/maps?q=Ταβέρνα+Ο+Κύριος+Σπύρος+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Ταβέρνα Ο Κύριος Σπύρος στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Ταβέρνα Ο Κύριος Σπύρος στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="ladokola"> Λαδόκολλα</label>
+        <a href="https://www.google.com/maps?q=Λαδόκολλα+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Λαδόκολλα στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Λαδόκολλα στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="limopoula"> Ταβέρνα Λιμνοπούλα</label>
+        <a href="https://www.google.com/maps?q=Ταβέρνα+Λιμνοπούλα+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Ταβέρνα Λιμνοπούλα στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Ταβέρνα Λιμνοπούλα στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="apomero"> Apomero</label>
+        <a href="https://www.google.com/maps?q=Apomero+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Apomero στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Apomero στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="strivodikon"> Στριβοδικείον</label>
+        <a href="https://www.google.com/maps?q=Στριβοδικείον+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Στριβοδικείον στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Στριβοδικείον στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="maragkos"> ΜΑΡΑΓΚΟΣ Ψησταριά</label>
+        <a href="https://www.google.com/maps?q=ΜΑΡΑΓΚΟΣ+Ψησταριά+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία ΜΑΡΑΓΚΟΣ Ψησταριά στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία ΜΑΡΑΓΚΟΣ Ψησταριά στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
     </ul>
   </div>
 
-  <div class="accordion-section">
+  <div class="accordion-section" id="brunch">
     <h2>🥞 Μπραντς</h2>
     <ul>
-      <li><label><input type="checkbox" data-id="porcelain"> Πορσελάνη cafe - wine bar</label> <a href="https://www.google.com/maps?q=Porcelain+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+      <li><label><input type="checkbox" data-id="porcelain"> Πορσελάνη cafe - wine bar</label>
+        <a href="https://www.google.com/maps?q=Porcelain+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Πορσελάνη cafe - wine bar στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Πορσελάνη cafe - wine bar στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Αγαπημένη επιλογή για μένα είναι τα scramble habi daby. Πέρα από brunch, πέρνα και για ένα κρασάκι. Πολλές μέρες διοργανώνει live με τζαζ μουσικούλα. Top επιλογή για χειμώνα.</small>
-      <li><label><input type="checkbox" data-id="favela"> Favela Nº17</label> <a href="https://www.google.com/maps?q=Favela+Νº17+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="favela"> Favela Nº17</label>
+        <a href="https://www.google.com/maps?q=Favela+Νº17+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Favela Nº17 στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Favela Nº17 στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Εδώ η φάση θέλει υπομονή… και όχι άδικα. Τα pancakes τους είναι φοβερά (ψάξε στο TikTok και θα καταλάβεις), αλλά ειδικά το καλοκαίρι η αναμονή είναι δεδομένη. Τον χειμώνα η κίνηση πέφτει, αλλά και πάλι δεν πας για “στα γρήγορα”. Πέρα από το φαγητό, είναι και πολύ καλή επιλογή για κοκτειλάκι – τόσο το καλοκαίρι όσο και, ίσως ακόμα περισσότερο, τον χειμώνα.</small>
-      <li><label><input type="checkbox" data-id="gkampa-o"> Bistro Gabao</label> <a href="https://www.google.com/maps?q=Bistro+Gabao+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="paneteria"> Panetteria</label> <a href="https://www.google.com/maps?q=Panetteria+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="gkampa-o"> Bistro Gabao</label>
+        <a href="https://www.google.com/maps?q=Bistro+Gabao+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Bistro Gabao στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Bistro Gabao στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="paneteria"> Panetteria</label>
+        <a href="https://www.google.com/maps?q=Panetteria+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Panetteria στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Panetteria στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Τοπ επιλογή με ωραία, νόστιμα υλικά και ψωμί. Θα βρεις τεράστια γκάμα σε σάντουιτς – και όχι μόνο.</small>
-      <li><label><input type="checkbox" data-id="starenio"> Starenio bakery</label> <a href="https://www.google.com/maps?q=Starenio+Bakery+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="starenio"> Starenio bakery</label>
+        <a href="https://www.google.com/maps?q=Starenio+Bakery+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Starenio bakery στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Starenio bakery στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Εδώ θα βρεις από φρέσκες, χειροποίητες πίτες και γλυκά, μέχρι ωραίες επιλογές για vegan και non-vegan. Ό,τι έχω δοκιμάσει μου έχει αρέσει. Είναι από τα μέρη που περνάς για ένα γρήγορο σνακ ή καφέ, και φεύγεις με τη σκέψη “θα ξανάρθω”.</small>
     </ul>
   </div>
 
-  <div class="accordion-section">
+  <div class="accordion-section" id="pizza">
     <h2>🍕 Πίτσα & Ιταλικό</h2>
     <ul>
-      <li><label><input type="checkbox" data-id="bosketo"> Boschetto</label> <a href="https://www.google.com/maps?q=Boschetto+Κέρκυρα" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="la-familia"> La Famiglia</label> <a href="https://www.google.com/maps?q=La+Famiglia+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="artsti"> Artisti</label> <a href="https://www.google.com/maps?q=Artisti+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="solemio"> O’Sole Mio da Enzo</label> <a href="https://www.google.com/maps?q=O’Sole+Mio+da+Enzo+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+      <li><label><input type="checkbox" data-id="bosketo"> Boschetto</label>
+        <a href="https://www.google.com/maps?q=Boschetto+Κέρκυρα" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Boschetto στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Boschetto στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="la-familia"> La Famiglia</label>
+        <a href="https://www.google.com/maps?q=La+Famiglia+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία La Famiglia στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία La Famiglia στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="artsti"> Artisti</label>
+        <a href="https://www.google.com/maps?q=Artisti+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Artisti στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Artisti στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="solemio"> O’Sole Mio da Enzo</label>
+        <a href="https://www.google.com/maps?q=O’Sole+Mio+da+Enzo+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία O’Sole Mio da Enzo στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία O’Sole Mio da Enzo στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
     </ul>
   </div>
 
-  <div class="accordion-section">
+  <div class="accordion-section" id="kafes">
     <h2>☕ Καφές & Σνακ</h2>
     <ul>
-      <li><label><input type="checkbox" data-id="kafeteria"> Cafetierra</label> <a href="https://www.google.com/maps?q=Cafetierra+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="kokonela"> Coconela Coffee & Food</label> <a href="https://www.google.com/maps?q=Coconela+Coffee+%26+Food+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+      <li><label><input type="checkbox" data-id="kafeteria"> Cafetierra</label>
+        <a href="https://www.google.com/maps?q=Cafetierra+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Cafetierra στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Cafetierra στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="kokonela"> Coconela Coffee & Food</label>
+        <a href="https://www.google.com/maps?q=Coconela+Coffee+%26+Food+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Coconela Coffee &amp; Food στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Coconela Coffee &amp; Food στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Δώσε μια ευκαιρία σε ό,τι έχει στη βιτρίνα.</small>
-      <li><label><input type="checkbox" data-id="saltino"> Saltino</label> <a href="https://www.google.com/maps?q=Saltino+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="saltino"> Saltino</label>
+        <a href="https://www.google.com/maps?q=Saltino+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Saltino στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Saltino στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
     </ul>
   </div>
 
-  <div class="accordion-section">
+  <div class="accordion-section" id="poto">
     <h2>🍹 Ποτό & Βράδυ </h2>
     <ul>
-      <li><label><input type="checkbox" data-id="mikro-kafe"> Mikro Café</label> <a href="https://www.google.com/maps?q=Mikro+Café+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="mikro-kafe"> Interessa</label> <a href="https://share.google/hqJrx9nKdbzoLGYLq" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+      <li><label><input type="checkbox" data-id="mikro-kafe"> Mikro Café</label>
+        <a href="https://www.google.com/maps?q=Mikro+Café+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Mikro Café στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Mikro Café στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="mikro-kafe"> Interessa</label>
+        <a href="https://share.google/hqJrx9nKdbzoLGYLq" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Interessa στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Interessa στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description"> Κομψό μπαρ με δημιουργικά cocktails και ζεστή ατμόσφαιρα. Νέα προσθήκη που έχει δώσει ζωντάνια στη νυχτερινή ζωή της πόλης· συχνά θα δεις κόσμο να στέκεται και να απολαμβάνει το ποτό του στην πλατεία μπροστά.</small>
-      <li><label><input type="checkbox" data-id="xloi"> CHOES</label> <a href="https://www.google.com/maps?q=CHOES+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="xloi"> CHOES</label>
+        <a href="https://www.google.com/maps?q=CHOES+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία CHOES στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία CHOES στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Πολύ αγαπημένη επιλογή. Ένα κρασάδικο με τεράστιο. Δεν έχει πολλά τραπεζάκια, οπότε η φάση είναι πιο ζεστή και προσωπική. Αν είσαι του κρασιού, τσέκαρε και το wine tasting που κάνουν – αξίζει.</small>
-      <li><label><input type="checkbox" data-id="saluteria"> SALUTERIA</label> <a href="https://www.google.com/maps?q=SALUTERIA+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
-      <li><label><input type="checkbox" data-id="silo"> Silo</label> <a href="https://www.google.com/maps?q=Silo+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="saluteria"> SALUTERIA</label>
+        <a href="https://www.google.com/maps?q=SALUTERIA+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία SALUTERIA στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία SALUTERIA στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
+
+      <li><label><input type="checkbox" data-id="silo"> Silo</label>
+        <a href="https://www.google.com/maps?q=Silo+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Silo στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Silo στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
       <small class="description">Εδώ προσωπικά απολαμβάνω τις επιλογές που έχει για κοκτέιλ αλλά και το νυχτερινό vibe του. Είναι πολυσύχναστο, με κυρίως ντόπιους θαμώνες, οπότε η φάση είναι ζωντανή χωρίς να γίνεται χαμός από τουρίστες. Προσφέρει και φαγητό, οπότε δεν χάνεις τίποτα να ρίξεις μια ματιά και στον κατάλογο. </small>
-      <li><label><input type="checkbox" data-id="alximika"> Αλχημικά Υλικά - The Alchemical Pub</label> <a href="https://www.google.com/maps?q=Αλχημικά+Υλικά+The+Alchemical+Pub+Corfu" target="_blank" rel="noopener"><img src="google-maps.png" alt="Map location" class="map-icon"></a></li>
+
+      <li><label><input type="checkbox" data-id="alximika"> Αλχημικά Υλικά - The Alchemical Pub</label>
+        <a href="https://www.google.com/maps?q=Αλχημικά+Υλικά+The+Alchemical+Pub+Corfu" target="_blank" rel="noopener noreferrer" aria-label="Τοποθεσία Αλχημικά Υλικά - The Alchemical Pub στο Google Maps">
+          <img src="google-maps.png" alt="Τοποθεσία Αλχημικά Υλικά - The Alchemical Pub στο Google Maps" class="map-icon" loading="lazy">
+        </a>
+      </li>
     </ul>
   </div>
+
   <p>
     <small style="color: #245182;">💾 Οι επιλογές σου αποθηκεύονται αυτόματα στον browser σου.</small>
   </p>
@@ -137,6 +339,7 @@
       Όλα αυτά είναι καθαρά προσωπικές επιλογές – τίποτα παραπάνω, τίποτα λιγότερο.  Δεν είμαι κριτικός φαγητού, ούτε γκουρού της γαστρονομίας. Απλά ένας άνθρωπος που αγαπάει τις γεύσεις και θέλει να μοιραστεί μερικά αγαπημένα του μέρη. 🍷🍔
     </p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>

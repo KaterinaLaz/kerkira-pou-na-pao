@@ -9,8 +9,8 @@
 }
 
 body{
-  max-width: 720px;
-  margin: 2rem auto;
+  max-width: 820px;
+  margin: 1rem auto;
   padding: 0 1rem ;
   font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -397,4 +397,25 @@ a:hover .map-icon {
 @media (max-width: 420px) {
   .toc a { padding: .5rem 1rem; font-size: .95rem; }
 }
-
+.lang-switch-fixed{
+      position:fixed;
+      top:12px;
+      left:12px;
+      z-index:9999;
+    }
+.lang-switch-fixed .lang-btn{
+      border:1px solid #d0d7de;
+      background:#fff;
+      border-radius:999px;
+      padding:.4rem .8rem;
+      cursor:pointer;
+      font-size:.9rem;
+      text-decoration:none;
+      color:#245182;
+      box-shadow:0 2px 6px rgba(0,0,0,.08);
+      display:inline-block;
+    }
+    .lang-switch-fixed .lang-btn:hover{
+      background:#245182;
+      color:#fff;
+    }
